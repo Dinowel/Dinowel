@@ -29,8 +29,13 @@ class App{
 		this.scene = new THREE.Scene();
         this.scene.add( this.dolly );
         
-		const ambient = new THREE.HemisphereLight(0xFFFFFF, 0xAAAAAA, 0.8);
+		const ambient = new THREE.HemisphereLight(0xd1370e, 0xd1cb0e, 0.8);
 		this.scene.add(ambient);
+
+        this.cube = new THREE.Mesh(
+            this.THREE.BoxBufferGeometry(4, 4, 4),
+            this.THREE.MeshLambertMaterial({color:'blue'});
+
 
 		this.renderer = new THREE.WebGLRenderer({ antialias: true });
 		this.renderer.setPixelRatio( window.devicePixelRatio );
