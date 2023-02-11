@@ -29,7 +29,7 @@ class App{
 		this.scene = new THREE.Scene();
         this.scene.add( this.dolly );
         
-		const ambient = new THREE.HemisphereLight(0xe67305, 0xbc2f1a, 0.8);
+		const ambient = new THREE.HemisphereLight(0x12fef2, 0x2712fe, 0.8);
 		this.scene.add(ambient);
 
       
