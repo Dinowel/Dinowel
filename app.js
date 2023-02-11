@@ -32,6 +32,12 @@ class App{
 		const ambient = new THREE.HemisphereLight(0xd1370e, 0xd1cb0e, 0.8);
 		this.scene.add(ambient);
 
+        this.cube = new THREE.Mesh(
+            new THREE.BoxBufferGeometry(1, 1, 1),
+            new THREE.MeshLambertMaterial({color:'Green'})
+        );
+        this.cube.position.set(0, 1.5, 4);
+        this.scene.add(this.cube);
 
 		this.renderer = new THREE.WebGLRenderer({ antialias: true });
 		this.renderer.setPixelRatio( window.devicePixelRatio );
